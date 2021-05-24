@@ -4,18 +4,29 @@ import { addTodo } from "../action/todos"
 
 const TodoInputForm = () => {
   let title = "";
+  let priority = "low";
   const dispatch = useDispatch()
   const titleInputHandler = (e) => {
     e.preventDefault()
     title = e.target.value;
     console.log(title);
   }
+  const priorityChangeHandler = (e) => {
+    e.preventDefault()
+    priority = e.target.value;
+    console.log(priority);
+  }
   return (
     <StyledTodoForm>
       <h1>Add ToDos</h1>
       <form>
-        <input type="text" id="title" onChange={titleInputHandler} />
-        <button onClick={(e) => { e.preventDefault(); dispatch(addTodo(title)); }}>Add</button>
+        <input type="text" id="title" onChange={titleInputHandler} required/>
+        <select name="priority" onChange={priorityChangeHandler}>
+          <option value="low">Low</option>
+          <option value="moderate">Moderate</option>
+          <option value="high">High</option>
+        </select>
+        <button onClick={(e) => { e.preventDefault(); dispatch(addTodo(title, priority)); }}>Add</button>
       </form>
     </StyledTodoForm>
   );
@@ -29,18 +40,22 @@ const StyledTodoForm = styled.div`
   background-color: #f2f2f2;
   form{
     background-color: #f2f2f2;
-    padding: 1rem 3rem ;
     display: flex;
+    width: 300px;
     flex-direction: column;
-    width: 270px;
-    height: 120px;
     justify-content: space-evenly;
     button{
-      background-color: #7ffa7f;
-     padding: 1rem 4rem ;  
+     background-color: #7ffa7f;
+     padding: 1rem 2rem ; 
+    margin-top: 1rem;
+
+    }
+    select{ 
+      padding: 1rem 4rem ;
+    font-size: 1.5rem;
+    margin-top: 1rem;
     }
     input{
-      height: 7rem;
       font-size: 2rem;
       padding: 1rem;
     }

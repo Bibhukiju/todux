@@ -1,22 +1,27 @@
 const todosReducer = (state = [], action) => {
   switch (action.type) {
     case "ADD_TODO": {
-      return [...state, action.payload];
+      return [action.payload, ...state];
     }
     case "DELETE_TODO": {
-      const a = [...state];
-      a.pop();
-      return a;
+      const todos = [...state];
+      console.log(action.payload);
+      const finalTodo = todos.filter((todo) => {
+        return todo.id !== action.payload.id;
+      });
+      return finalTodo;
     }
     case "ISCOMPLETED": {
-      const a = [...state];
-      a.forEach((test) => {
-        if (test.id === 2) {
-          const isdone = test.isDone;
-          test.isDone = !isdone;
+      const todos = [...state];
+      console.log(action.payload);
+      todos.forEach((todo) => {
+        console.log(todo.id);
+        if (todo.id === action.payload.id) {
+          const isdone = todo.isDone;
+          todo.isDone = !isdone;
         }
       });
-      return a;
+      return todos;
     }
     default:
       return state;
