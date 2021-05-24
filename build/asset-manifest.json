@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todux/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/todux/static/js/main.dc803d0d.chunk.js",
+    "main.js.map": "/todux/static/js/main.dc803d0d.chunk.js.map",
+    "runtime-main.js": "/todux/static/js/runtime-main.48483e7f.js",
+    "runtime-main.js.map": "/todux/static/js/runtime-main.48483e7f.js.map",
+    "static/js/2.e76c6afa.chunk.js": "/todux/static/js/2.e76c6afa.chunk.js",
+    "static/js/2.e76c6afa.chunk.js.map": "/todux/static/js/2.e76c6afa.chunk.js.map",
+    "static/js/3.e429c4f7.chunk.js": "/todux/static/js/3.e429c4f7.chunk.js",
+    "static/js/3.e429c4f7.chunk.js.map": "/todux/static/js/3.e429c4f7.chunk.js.map",
+    "index.html": "/todux/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/todux/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.e76c6afa.chunk.js.LICENSE.txt": "/todux/static/js/2.e76c6afa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.48483e7f.js",
+    "static/js/2.e76c6afa.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.dc803d0d.chunk.js"
+  ]
+}
